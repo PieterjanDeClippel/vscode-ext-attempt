@@ -16,7 +16,14 @@
         "bundle": false,
         "main": "apps/exte/src/main.ts",
         "tsConfig": "apps/exte/tsconfig.app.json",
-        "assets": ["apps/exte/src/assets"],
+        "assets": [
+          "apps/exte/src/assets",
+          {
+            "input": "apps/exte/src",
+            "glob": "**/package.json",
+            "output": "."
+          }
+        ],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
